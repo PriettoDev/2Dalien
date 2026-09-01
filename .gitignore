@@ -208,3 +208,4 @@ __marimo__/
 
 #Ignora o arquivo gigantesco do monkeytype
 .sqlite3
+*.sqlite3
