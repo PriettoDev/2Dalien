@@ -1,5 +1,6 @@
 import sys 
 import pygame
+from bullet_manager import BulletManager
 
 class GameEventHandler:
     """Responsável apenas por ler e tratar os eventos do teclado/janela."""
@@ -26,7 +27,7 @@ class GameEventHandler:
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         elif event.key == pygame.K_SPACE:
-            self.bullet_manager._fire_bullet()
+            self._fire_bullet() #self.bullet_manager._fire_bullet()
 
 
     def _handle_keyup(self, event: pygame.event.Event) -> None:

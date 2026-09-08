@@ -10,8 +10,8 @@ from bullet_manager import BulletManager
 from fleet_manager import FleetManager
 from game_renderer import GameRenderer
 
-
-
+from alien import Alien
+from fast_alien import FastAlien
 
 class AlienInvasion:
     """Gerencia o jogo e seus comportamentos."""
@@ -33,7 +33,7 @@ class AlienInvasion:
         self.bg_color = (self.settings.bg_color)
 
         self.bullet_manager = BulletManager(self.screen, self.settings, self.ship)
-        self.fleet_manager = FleetManager(self.screen, self.settings, self.ship)
+        self.fleet_manager = FleetManager(self.screen, self.settings, self.ship, FastAlien)
         self.event_handler = GameEventHandler(self.ship, self.bullet_manager)
         self.renderer = GameRenderer(
             self.screen,
@@ -46,9 +46,9 @@ class AlienInvasion:
     def _update_game_state(self) -> None:
         """Atualiza a posição da nave, dos projéteis e dos alienígenas."""
         self.ship.update()
-        self._update_bullets()
-        self._update_aliens()
-        self._check_ship_collision()
+        self.bullet_manager._update_bullets()
+        self.fleet_manager._update_aliens()
+        self.fleet_manager._check_ship_collision()
         
     def run_game(self):
         """Cria um laço de repetição para a tela sempre ficar visível até
