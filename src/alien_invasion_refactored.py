@@ -46,7 +46,7 @@ class AlienInvasion:
     def _update_game_state(self) -> None:
         """Atualiza a posição da nave, dos projéteis e dos alienígenas."""
         self.ship.update()
-        self.bullet_manager._update_bullets()
+        self.bullet_manager._update_bullets(self.fleet_manager.aliens)
         self.fleet_manager._update_aliens()
         self.fleet_manager._check_ship_collision()
         
