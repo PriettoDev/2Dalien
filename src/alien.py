@@ -12,7 +12,8 @@ class Alien(Sprite):
         self.settings = alien_invasion_settings
 
         # Carrega a imagem do alienígena e obtém seu rect
-        self.image = pygame.image.load("../images/alien.bmp")
+        self.image = pygame.image.load('./images/alien.bmp')
+        # "../" significa "suba um nível a partir de onde o Python está rodando". Se você está rodando de AQS/ e usa ../images/, o Python vai procurar images/ um nível acima de AQS/ — ou seja, fora do seu projeto inteiro. Isso provavelmente geraria um FileNotFoundError na hora de carregar a imagem da nave.
         self.rect = self.image.get_rect()
 
         # Inicia cada novo alienígena próximo à parte superior esquerda da tela
