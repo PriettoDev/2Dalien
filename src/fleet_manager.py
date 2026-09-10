@@ -47,12 +47,6 @@ class FleetManager:
                 for alien_number in range(number_aliens_x):
                     #Cria um alienígena e o posiciona na linha
                     self._create_alien(alien_number, row_number, alien_width, alien_height)
-                    alien = Alien(self.screen, self.settings)
-                    alien.x = alien_width + 2 * alien_width * alien_number
-                    alien.rect.x = alien.x
-                    alien.y = alien_height + 2 * alien_height * row_number
-                    alien.rect.y = alien.y
-                    self.aliens.add(alien)
 
     def _update_aliens(self) -> None:
         """Verifica se a frota de alienígenas está em uma borda, então atualiza as posições de todos os alienígenas na frota"""
