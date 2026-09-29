@@ -1,7 +1,7 @@
 import abc
 
 
-class IDesconto(abc):
+class IDesconto(abc.ABC):
     @abc.abstractmethod
     def calcular(self, valor):
         raise NotImplementedError
