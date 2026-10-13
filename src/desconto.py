@@ -4,7 +4,7 @@ import abc
 class IDesconto(abc.ABC):
     @abc.abstractmethod
     def calcular(self, valor):
-        raise NotImplementedError
+        raise NotImplementedError # pragma: no cover
 
 
 class DescontoNormal(IDesconto):
@@ -12,7 +12,7 @@ class DescontoNormal(IDesconto):
         return valor * 0.1
 
 
-class DecontoVIP(IDesconto):
+class DescontoVIP(IDesconto):
     def calcular(self, valor):
         return valor * 0.2
 
@@ -29,11 +29,11 @@ class Pedido:
     def total(self, valor):
         return valor - self.desconto.calcular(valor)
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     pedido_normal = Pedido(DescontoNormal())
     print(pedido_normal.total(100))
 
-    pedido_vip = Pedido(DecontoVIP())
+    pedido_vip = Pedido(DescontoVIP())
     print(pedido_vip.total(100))
 
     pedido_premium = Pedido(DescontoPremium())
