@@ -38,6 +38,7 @@ pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
+htmlcov
 .tox/
 .nox/
 .coverage
@@ -206,5 +207,14 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-#Ignora o monkeytype
+#Ignora o arquivo gigantesco do monkeytype
 .sqlite3
+*.sqlite3
+
+# Unit test / coverage reports
+relatorio.html
+.relatorio.html
+*.relatorio.html
+
+
+/assets/
