@@ -1,0 +1,15 @@
+ast_serialize==0.8.0
+libcst==1.9.0
+librt==0.15.0
+MonkeyType==23.3.0
+mypy==2.3.0
+mypy_extensions==1.1.0
+pathspec==1.1.1
+pygame==2.6.1
+pytest==9.1.1
+PyYAML==6.0.3
+ruff==0.16.2
+typing_extensions==4.16.0
+coverage==X.Y.Z
+pytest-html==X.Y.Z
+pytest-mock==X.Y.Z
