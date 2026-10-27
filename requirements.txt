@@ -10,6 +10,6 @@ pytest==9.1.1
 PyYAML==6.0.3
 ruff==0.16.2
 typing_extensions==4.16.0
-coverage==X.Y.Z
-pytest-html==X.Y.Z
-pytest-mock==X.Y.Z
+coverage==7.17.0
+pytest-html==4.2.0
+pytest-mock==3.17.0
